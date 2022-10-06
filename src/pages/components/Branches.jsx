@@ -9,13 +9,21 @@ const View = styled.div`
     absolute    
     z-10
     mt-10
+    flex
 `}
 `;
 
-const Container = styled.div`
+const LeftBranch = styled.div`
   ${tw`
-    flex
-    justify-center
+  justify-self-start
+  width[50vw]
+`}
+`;
+
+const RightBranch = styled.div`
+  ${tw`
+  justify-self-end
+  width[50vw]
 `}
 `;
 
@@ -28,7 +36,6 @@ const Branches = () => {
     const initialWindowWidth = window.innerWidth;
     setWindowX(initialWindowWidth);
     setWindowY(initialWindowHeight);
-    console.log("x", windowX, "y", windowY);
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -43,23 +50,25 @@ const Branches = () => {
 
   return (
     <View>
-      <Container>
-        <Parallax translateX={[`${windowX / 2 + 2500}px`, `${-windowX}px`]}>
+      <LeftBranch>
+        <Parallax translateX={[`150`, `-80`]}>
           <Image
             src={"/treetopleft.png"}
-            width={windowX + 1000}
-            height={windowX + 1000}
+            width={windowX}
+            height={windowX}
           />
         </Parallax>
-        <Parallax translateX={[`${-windowX / 2 - 2500}px`, `${windowX}px`]}>
+        </LeftBranch>
+        <RightBranch> 
+        <Parallax translateX={[`-50`, `0`]}>
           <Image
             src={"/treetopright.png"}
-            width={windowX + 1000}
-            height={windowX + 1000}
+            width={windowX}
+            height={windowX}
             className="top[100px]"
           />
         </Parallax>
-      </Container>
+        </RightBranch>
     </View>
   );
 };

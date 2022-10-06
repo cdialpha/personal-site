@@ -7,6 +7,7 @@ const View = styled.div`
   ${tw`
     absolute 
     w-screen
+    bg-white
     `}
   transform:translateY(${(props) => props.offset}px);
   transition: margin-top ease;

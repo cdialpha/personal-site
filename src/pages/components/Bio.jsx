@@ -18,6 +18,7 @@ const Container = styled.div`
 `}
 `;
 
+
 const SectionContainer = styled.div`
   ${tw`
     flex
@@ -160,7 +161,7 @@ const Bio = () => {
           <br />
           <p>
             In addition to employment, I am actively seeking volunteering
-            opportunities
+            opportunities that concern social justice, the immigrant community, and people experiencing homelessness.
           </p>
         </SectionText>
       </SectionContainer>

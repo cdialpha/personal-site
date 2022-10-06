@@ -8,10 +8,19 @@ import Intro from "./components/Intro";
 import Branches from "./components/Branches";
 import ScrollWrapper from "./components/ScrollWrapper";
 import SideBranches from "./components/SideBranches";
+import tw from "twin.macro";
+import styled from "styled-components";
+
+const Container = styled.div`
+${tw`
+w-screen
+bg-white
+`}
+`
 
 const Home = () => {
   return (
-    <>
+    <Container>
       <Navbar />
       <Branches />
       <ScrollWrapper>
@@ -23,7 +32,7 @@ const Home = () => {
         <Projects />
         <Connect />
       </ScrollWrapper>
-    </>
+    </Container>
   );
 };
 

@@ -3,17 +3,24 @@ import Image from "next/image";
 import tw from "twin.macro";
 import styled from "styled-components";
 
-const Container = styled.div`
+const View = styled.div`
   ${tw`
     grid-cols-1
     grid-rows-6
-    lg:flex
-    lg:flex-col
-    relative
+    md:grid-cols-2
+    md:grid-rows-4
     text-black
-    width[80%]
+    width[90%]
+    md:width[80%]
     ml-auto
     mr-auto
+    margin-top[1000px]
+`}
+`;
+
+const SectionContainer = styled.div` 
+${tw`
+flex
 `}
 `;
 
@@ -30,6 +37,7 @@ const SubTitle = styled.h2`
   font-weight[900]
   text-blue-900
   mt-5   
+  mb-5
 `}
 `;
 
@@ -43,7 +51,7 @@ const SectionText = styled.h1`
 
 const Skills = () => {
   return (
-    <Container id="skills" className="mt-20 height[1000px]">
+    <View id="skills" className="mt-20 height[1000px]">
       <SectionTitle>Skills</SectionTitle>
 
       <SubTitle className="text-2xl"> Project Management </SubTitle>
@@ -59,11 +67,16 @@ const Skills = () => {
       </SectionText>
       <SectionText>Form Management (Formik, React Hook Forms)</SectionText>
 
-      <SubTitle className="text-2xl"> Back End </SubTitle>
+    <SubTitle className="text-2xl"> Back End </SubTitle>
+      <SectionContainer> 
+      <Image src={'/ux-design.png'} width={200} height={200} />
+      <div>   
       <SectionText> Node, Express </SectionText>
       <SectionText> tRPC </SectionText>
       <SectionText> NextJS </SectionText>
       <SectionText> Django </SectionText>
+      </div>
+      </SectionContainer> 
 
       <SubTitle className="text-2xl"> DataBases </SubTitle>
       <SectionText> MongoDB, DocumentDB </SectionText>
@@ -80,7 +93,7 @@ const Skills = () => {
       <SectionText> Azure DeveOps (ADO) </SectionText>
       <SectionText> Docker </SectionText>
       <SectionText> AWS DevOps tools </SectionText>
-    </Container>
+    </View>
   );
 };
 

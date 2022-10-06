@@ -10,24 +10,23 @@ const Container = styled.div`
     justify-start
     align-items[center]
     text-black
-    width[80%]
     ml-auto
     mr-auto
     height[1500px]
     padding-top[200px]
-
 `}
 `;
 
 const HitBoxCalvin = styled.div`
   ${tw`
-  absolute
+    absolute
     height[500px]
     width[150px]
     left[150px]
     top[50px]
     z-50
-    overflow-visible
+    border-2
+    border-gray-200
 `}
 `;
 
@@ -39,15 +38,18 @@ const HitBoxMaliza = styled.div`
     left[300px]
     top[150px]
     z-50
+    border-2
+    border-gray-200
 `}
 `;
 
 const ImageContainer = styled.div`
   ${tw`
-    height[600px]
-    width[600px]
+    height[200px]
+    height[200px]
+    lg:height[600px]
+    lg:width[600px]
     relative
-    mt-20
 `}
 `;
 
@@ -115,7 +117,7 @@ const Intro = () => {
       <ImageContainer className="relative">
         <HitBoxCalvin className="group">
           <PointMe>
-            <Image src={"/pointme.png"} width={200} height={200} />{" "}
+            <Image src={"/pointme.png"} width={200} height={200} />
           </PointMe>
         </HitBoxCalvin>
         <div>
@@ -125,7 +127,7 @@ const Intro = () => {
             </PointNotMe>
           </HitBoxMaliza>
         </div>
-        <Image src={"/wedding.png"} width={600} height={600} />{" "}
+        <Image src={"/wedding.png"} width={200} height={200} />{" "}
       </ImageContainer>
       <SectionTitle> Ope, hey there. </SectionTitle>
       <SectionTitle>

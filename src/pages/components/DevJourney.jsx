@@ -11,7 +11,7 @@ const Container = styled.div`
     width[80%]
     ml-auto
     mr-auto
-
+    margin-top[1000px]
 `}
 `;
 
@@ -34,7 +34,9 @@ const SectionTitle = styled.div`
   ${tw`
   text-6xl  
   font-weight[900]
-    text-blue-900    
+    text-blue-900   
+    ml-auto
+    mr-auto
 `}
 `;
 
@@ -61,7 +63,7 @@ const DevJourney = () => {
         started anywhere else, I would have given up by blocking frustrations
         too quickly. Javascript had a massive educational commmunity and a
         langauge where you could immediately see it's real world applications. I
-        doubt I would have felt the same impact if I had pivoted into data
+        doubt I would have felt the same impact if I would have tried to pivot into data
         science or ML.
       </SectionText>
       <SectionText>
